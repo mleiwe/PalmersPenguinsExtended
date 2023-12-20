@@ -40,8 +40,17 @@ The following libraries are required (they arrive pre-loaded within a Kaggle not
 * scikit-learn
 * XGBoost
 * LightGBM
-* 
-# Training
+
+## Correlations 
+There was no immediate segregation of the data that was apparent meaning the challenge was clearly multidimensional
+![Screenshot 2023-12-20 at 17 59 45](https://github.com/mleiwe/PalmersPenguinsExtended/assets/29621219/c3d414c3-6afe-4676-89d7-c23ca0f754d3)
+
+## Model Selection
+The two best ML solutions out of those tested were LightGBM and the MLPC (multi-layer perceptron classifier - a neural network) and the differences in the test set were marginal. However, MLPC was ~7 times faster, and was therefore selected
+
+## Feature engineering
+Feature Engineering was attempted by using PCA to reduce the number of variables. Assessment of the Variance explained showed that ~95% could be accounted for by 6 principal components. Therefore, models were also evaluated on these 6 principal components. However, no significant improvements were observed.
+![image](https://github.com/mleiwe/PalmersPenguinsExtended/assets/29621219/b3fd01c7-42f6-40df-8c5d-58b86e2caf11)
 
 # How to deploy locally
 You can run this service locally using the docker file (provided you have docker installed).
